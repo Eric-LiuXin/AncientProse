@@ -8,7 +8,7 @@
 import scrapy
 
 
-class CrawlerItem(scrapy.Item):
+class AncientProseItem(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
+    book = scrapy.Field()
     pass
