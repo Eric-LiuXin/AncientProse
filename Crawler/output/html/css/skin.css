@@ -1,0 +1,28 @@
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,p,blockquote,th,td{
+	padding:0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	color:#0F0F0F;
+}
+h1{font-weight:bold; font-size:25px; line-height:35px; height:35px; margin-bottom:20px;margin-top: 40px;}
+h2{font-weight:bold; font-size:20px; line-height:22px; height:22px; margin-bottom:5px; margin-top: 20px;}
+p{ line-height:160%;}
+
+textarea{border:solid 1px #bcc5d0; line-height:20px;margin-left:3px; margin-right:3px;} 
+html,body {background-color:#E1E0C7;}
+body {font-family: 楷体,Arial, Helvetica;font-size: 12px;line-height:22px;margin: 0px;background-attachment:fixed;}
+span{ line-height:16px;}
+
+.main3{ width:1000px; clear:both; margin-left:auto; margin-right:auto; overflow:hidden;}
+
+.main3 .left{ width:670px; clear:left; float:left;}
+
+.main3 .left .sons{ height:auto; clear:both; background-color:#F0EFE2; overflow:hidden; margin-top:20px; border:1px solid #C8C7BC;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+.main3 .left .sons .cont{ height:auto; clear:both; margin-top:15px; font-size:14px; margin-left:20px; margin-right:20px; line-height:200%; overflow:hidden;}
+.main3 .left .sons .cont p{ margin-bottom:10px; line-height:200%;}
+.main3 .left .sons .cont a{ font-size:14px; line-height:200%;}
+.main3 .left .sons .cont span{line-height:200%;}
+.main3 .left .sons .cont .contson{ clear:both; overflow:hidden;}
+
