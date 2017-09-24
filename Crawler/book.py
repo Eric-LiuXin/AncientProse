@@ -5,6 +5,7 @@ import codecs
 import pdfkit
 import urllib.request
 import os
+from my_sql import BookDB
 
 class Book :
     def __init__(self, title):
@@ -13,6 +14,7 @@ class Book :
         self.logo = None
         self.chapter_start_url = None
         self.chapters = list()
+        self.logo_local_path = None
         self.book_start_html = '''
             <!DOCTYPE html>
                 <html>
@@ -51,10 +53,12 @@ class Book :
         pdfkit.from_file('./output/html/%s.html'%self.title, './output/pdf/%s.pdf'%self.title)
     
     def download_logo(self):
-        urllib.request.urlretrieve(self.logo, './output/img/%s'%(os.path.split(self.logo)[1]))
+        self.logo_local_path = './output/img/%s'%(os.path.split(self.logo)[1])
+        urllib.request.urlretrieve(self.logo, self.logo_local_path)
 
     def upload_to_db(self):
-        pass
+        db = BookDB()
+        db.insert(self.title, self.introduce, self.logo_local_path)
 
 
 class BookImpl :

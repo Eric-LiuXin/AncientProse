@@ -35,6 +35,7 @@ def crawl(book):
     book.download_logo()
     book.save_to_html()
     book.html_to_pdf()
+    book.upload_to_db()
 
 
 def get_page(url):
@@ -52,5 +53,7 @@ def get_page(url):
 
 
 if __name__=="__main__":
-    spider = Spider(['http://so.gushiwen.org/guwen/'])
+    url = 'http://so.gushiwen.org/guwen/Default.aspx?p='
+    start_urls = [url + str(i) for i in range(1,30)]
+    spider = Spider(start_urls)
     spider.multi_proc()
